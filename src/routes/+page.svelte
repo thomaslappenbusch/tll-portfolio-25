@@ -77,7 +77,7 @@
     </div>
     <div class="flex items-start">
         <div class="h-22 aspect-square bg-[#181828] flex items-center justify-center rounded-md">
-            <svg class="p-6 text-white" viewBox="0 0 24 24"><path fill="currentColor" d="m1 18l6-8l4.5 6H19l-5-6.65l-2.5 3.3L10.25 11L14 6l9 12zm4-2h4l-2-2.675zm0 0h4z"></path></svg>
+            <svg class="h-9 w-9 shrink-0 text-white" viewBox="0 0 24 24"><path fill="currentColor" d="m1 18l6-8l4.5 6H19l-5-6.65l-2.5 3.3L10.25 11L14 6l9 12zm4-2h4l-2-2.675zm0 0h4z"></path></svg>
         </div>
         <div class="flex items-center justify-between grow">
             <div class="flex flex-col ml-4">
@@ -95,8 +95,8 @@
         </div>
     </div>
     <div class="flex items-start mt-12">
-        <div class="h-22 aspect-square shrink-0 bg-[#ff7701] flex items-center justify-center rounded-md">
-            <svg class="sm:p-7.5 p-2" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        <div class="h-22 aspect-square bg-[#ff7701] flex items-center justify-center rounded-md">
+            <svg class="h-8 w-8 shrink-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 336.000000 306.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <metadata>
@@ -131,7 +131,7 @@
     </div>
     <div class="flex items-start mt-12">
         <div class="h-22 aspect-square bg-[#00bcff] flex items-center justify-center rounded-md">
-            <svg class="p-7 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="m4 8l4-4m6 0L4 14m0 6L20 4m0 6L10 20m10-4l-4 4"/></svg>
+            <svg class="h-8 w-8 shrink-0 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="m4 8l4-4m6 0L4 14m0 6L20 4m0 6L10 20m10-4l-4 4"/></svg>
         </div>
         <div class="flex items-center justify-between grow">
             <div class="flex flex-col ml-4">
