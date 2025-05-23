@@ -232,7 +232,7 @@
         {/if}
         
         {#if currentSlide < 1}
-            <button out:fade={{duration:100}} onclick={() => currentSlide = currentSlide + 1} class="cursor-pointer absolute right-2 bottom-0 sm:top-1/2 -translate-y-1/2 hover:bg-tertiary/10 rounded-full">
+            <button out:fade={{duration:100}} onclick={() => currentSlide = currentSlide + 1} class="cursor-pointer absolute right-2 bottom-0 sm:top-1/2 -translate-y-1/2 hover:bg-tertiary/10 sm:hover:bg-transparent rounded-full">
                 <ChevronRight class="h-7 w-7 pl-0.5"/>
             </button>
         {/if}
