@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: Geist, ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@theme {
+    /* Light Mode */
+    --color-background: #ffffff;
+    --color-content: #000000;      /* Pure black */
+    --color-secondary: #262626;    /* Darker than before, but still readable */
+    --color-secondary-muted: #4d4d4d; /* Midpoint between secondary and tertiary */
+    --color-tertiary: #666666;     /* Darkened for better progression */
+    --color-muted: #888888;        /* Slightly darker than before for better linearity */
+    --color-accent: #d9d9d9;
+}
+
+.dark {
+    /* Dark Mode */
+    --color-background: #080808;
+    --color-content: #ffffff;      /* Pure white */
+    --color-secondary: #d9d9d9;    /* Slightly darker than white but still very readable */
+    --color-secondary-muted: #b3b3b3; /* Good midpoint in the progression */
+    --color-tertiary: #999999;     /* Lightened from before */
+    --color-muted: #808080;        /* Adjusted to be visible but clearly muted */
+    --color-accent: #d9d9d9;
+}
+
+[data-aos="subtle-fade-up"] {
+    transform: translateY(12px);
+    opacity: 0;
+    filter: blur(2px);
+    transition-property: transform, opacity, filter;
+    &.aos-animate {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
