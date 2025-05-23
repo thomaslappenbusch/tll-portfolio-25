@@ -173,7 +173,7 @@
                         <!-- svelte-ignore a11y_missing_attribute -->
                         <!-- svelte-ignore a11y_consider_explicit_label -->
                         <a
-                            class="relative h-[150px] w-[90px] sm:w-[150px] overflow-hidden rounded-l-md bg-content/50 group"
+                            class="relative h-[150px] w-[150px] overflow-hidden rounded-l-md bg-content/50 group"
                         >
                             <img 
                                 src="https://media.istockphoto.com/id/480155792/photo/fogged-in.jpg?s=612x612&w=0&k=20&c=f7eqdlimc3B9pxkO6Gd6yZEgVNNTFNw0LhUj3s04_Sg="
@@ -184,7 +184,7 @@
                             <div class="font-medium text-base text-content flex items-center justify-between">
                                 Lake Cushman Drive
                             </div>
-                            <div class="text-tertiary text-[10px] sm:text-[11px] -mt-[2px]">Western Washington • 50 minutes • 43 miles</div>
+                            <div class="text-tertiary text-[11px] -mt-[2px]">Western Washington • 50 minutes • 43 miles</div>
                             <div class="flex items-center mt-auto w-full space-x-2">
                                 <div class="relative group grow">
                                 
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                         <!-- svelte-ignore a11y_consider_explicit_label -->
-                        <a class="absolute top-2 right-2 hidden sm:flex">
+                        <a class="absolute top-2 right-2">
                             <svg class="text-content fill-background cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z"/></svg>
                         </a>
                     </div>
