@@ -173,7 +173,7 @@
                         <!-- svelte-ignore a11y_missing_attribute -->
                         <!-- svelte-ignore a11y_consider_explicit_label -->
                         <a
-                            class="relative h-[150px] w-[150px] overflow-hidden rounded-l-md bg-content/50 group"
+                            class="relative h-[150px] hidden sm:flex sm:w-[150px] overflow-hidden rounded-l-md bg-content/50 group"
                         >
                             <img 
                                 src="https://media.istockphoto.com/id/480155792/photo/fogged-in.jpg?s=612x612&w=0&k=20&c=f7eqdlimc3B9pxkO6Gd6yZEgVNNTFNw0LhUj3s04_Sg="
