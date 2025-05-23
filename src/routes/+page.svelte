@@ -34,13 +34,6 @@
         </button>
         
     </div>
-    <button onclick={toggleMode} class="hover:bg-tertiary/20 mt-1 flex sm:hidden transition cursor-pointer rounded-md h-9 w-9 border border-tertiary/50 p-1">
-        {#if mode.current === "dark"}
-            <Moon class="h-full w-full"/>
-        {:else}
-            <Sun class="h-full w-full p-[1px]"/>
-        {/if}
-    </button>
 </div>
 
 <div class="sm:hidden items-center space-x-6 z-10 flex mt-12 sm:mt-16">
@@ -52,6 +45,14 @@
     <a class="h-9 w-9 text-content hover:text-accent transition cursor-pointer rounded-md">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="currentColor" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3M39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></svg>
     </a>
+    <div class="h-5 bg-tertiary/60 w-[2px] rounded-full"></div>
+    <button onclick={toggleMode} class="hover:bg-tertiary/20 -ml-1 transition cursor-pointer rounded-md h-10 w-10 p-1">
+        {#if mode.current === "dark"}
+            <Moon class="h-full w-full"/>
+        {:else}
+            <Sun class="h-full w-full p-[1px]"/>
+        {/if}
+    </button>
 </div>
 
 <p class="text-start text-content mt-12 sm:mt-16 text-lg ">
@@ -94,8 +95,8 @@
         </div>
     </div>
     <div class="flex items-start mt-12">
-        <div class="h-22 aspect-square bg-[#ff7701] flex items-center justify-center rounded-md">
-            <svg class="p-7.5 shrink-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        <div class="h-22 aspect-square shrink-0 bg-[#ff7701] flex items-center justify-center rounded-md">
+            <svg class="sm:p-7.5 p-2" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 336.000000 306.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <metadata>
