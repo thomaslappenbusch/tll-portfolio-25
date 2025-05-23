@@ -44,15 +44,15 @@
 </div>
 
 <div class="sm:hidden items-center space-x-6 z-10 flex mt-12 sm:mt-16">
-        <!-- svelte-ignore a11y_consider_explicit_label -->
-        <button class="h-9 w-9 text-content hover:text-accent transition cursor-pointer rounded-md">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38c0-.27.01-1.13.01-2.2c0-.75-.25-1.23-.54-1.48c1.78-.2 3.65-.88 3.65-3.95c0-.88-.31-1.59-.82-2.15c.08-.2.36-1.02-.08-2.12c0 0-.67-.22-2.2.82c-.64-.18-1.32-.27-2-.27s-1.36.09-2 .27c-1.53-1.03-2.2-.82-2.2-.82c-.44 1.1-.16 1.92-.08 2.12c-.51.56-.82 1.28-.82 2.15c0 3.06 1.86 3.75 3.64 3.95c-.23.2-.44.55-.51 1.07c-.46.21-1.61.55-2.33-.66c-.15-.24-.6-.83-1.23-.82c-.67.01-.27.38.01.53c.34.19.73.9.82 1.13c.16.45.68 1.31 2.69.94c0 .67.01 1.3.01 1.49c0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8"/></svg>
-        </button>
-        <!-- svelte-ignore a11y_consider_explicit_label -->
-        <button class="h-9 w-9 text-content hover:text-accent transition cursor-pointer rounded-md">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="currentColor" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3M39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></svg>
-        </button>
-    </div>
+    <!-- svelte-ignore a11y_consider_explicit_label -->
+    <a href="test" target="_blank" class="h-9 w-9 text-content hover:text-accent transition cursor-pointer rounded-md">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38c0-.27.01-1.13.01-2.2c0-.75-.25-1.23-.54-1.48c1.78-.2 3.65-.88 3.65-3.95c0-.88-.31-1.59-.82-2.15c.08-.2.36-1.02-.08-2.12c0 0-.67-.22-2.2.82c-.64-.18-1.32-.27-2-.27s-1.36.09-2 .27c-1.53-1.03-2.2-.82-2.2-.82c-.44 1.1-.16 1.92-.08 2.12c-.51.56-.82 1.28-.82 2.15c0 3.06 1.86 3.75 3.64 3.95c-.23.2-.44.55-.51 1.07c-.46.21-1.61.55-2.33-.66c-.15-.24-.6-.83-1.23-.82c-.67.01-.27.38.01.53c.34.19.73.9.82 1.13c.16.45.68 1.31 2.69.94c0 .67.01 1.3.01 1.49c0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8"/></svg>
+    </a>
+    <!-- svelte-ignore a11y_consider_explicit_label -->
+    <a class="h-9 w-9 text-content hover:text-accent transition cursor-pointer rounded-md">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="currentColor" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3M39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></svg>
+    </a>
+</div>
 
 <p class="text-start text-content mt-12 sm:mt-16 text-lg ">
     <!-- I'm a frontend developer, who specalizes in 
@@ -63,7 +63,7 @@
     <span class="text-[#007acc]">Typescript<svg class="h-4 w-4 inline-block ml-1 -mt-[2px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"/><path fill="#007acc" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 0 1 7.82 4.5a20.6 20.6 0 0 1 3 4c0 .16-5.4 3.81-8.69 5.85c-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 0 0-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.6 4.6 0 0 0 .54 2.34c.83 1.73 2.38 2.76 7.24 4.86c8.95 3.85 12.78 6.39 15.16 10c2.66 4 3.25 10.46 1.45 15.24c-2 5.2-6.9 8.73-13.83 9.9a38.3 38.3 0 0 1-9.52-.1a23 23 0 0 1-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9 9 0 0 1 1.15-.73L82 101l3.59-2.08l.75 1.11a16.8 16.8 0 0 0 4.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 0 0 .69-6.92c-1-1.39-3-2.56-8.59-5c-6.45-2.78-9.23-4.5-11.77-7.24a16.5 16.5 0 0 1-3.43-6.25a25 25 0 0 1-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.7 31.7 0 0 1 9.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49 49 0 0 1 .12-5.17C29.08 59 39 59 51 59h21.83z"/></svg></span>. 
     
     I have worked on SAAS dashboards, mapping apps and all kinds of user interfaces. In my freetime I enjoy hiking, weightlifting and cooking. -->
-    I'm a frontend developer, who specalizes in creating unique and modern user interfaces. I have worked on dashboards, mapping apps, user flows and more. Looking for my first position.
+    I'm a frontend developer, who specalizes in creating unique and modern user interfaces. I have worked on dashboards, mapping apps, user flows and more.
 </p>
 
 <div class="mt-16 h-[2px] w-full bg-tertiary/20 rounded-full"></div>
@@ -95,7 +95,7 @@
     </div>
     <div class="flex items-start mt-12">
         <div class="h-22 aspect-square bg-[#ff7701] flex items-center justify-center rounded-md">
-            <svg class="p-7.5" version="1.0" xmlns="http://www.w3.org/2000/svg"
+            <svg class="p-7.5 shrink-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 336.000000 306.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <metadata>
@@ -156,7 +156,7 @@
 <div class="flex flex-col w-full">
     <div class="flex justify-between items-center mt-12">
         <div class="text-2xl">
-            Component Gallery
+            Development Gallery
         </div>
     </div>
     <p class="mb-12 mt-3 text-tertiary">All of these were made by me. Get a hands-on feel for my style and capabilities.</p>
@@ -225,7 +225,7 @@
         </div>
         
         {#if currentSlide > 0}
-            <button out:fade={{duration:100}} onclick={() => currentSlide = currentSlide - 1} class="cursor-pointer absolute left-2 bottom-0 sm:top-1/2 -translate-y-1/2 hover:bg-tertiary/10 rounded-full">
+            <button out:fade={{duration:100}} onclick={() => currentSlide = currentSlide - 1} class="cursor-pointer absolute left-2 bottom-0 sm:top-1/2 -translate-y-1/2 hover:bg-tertiary/10 sm:hover:bg-transparent rounded-full">
                 <ChevronLeft class="h-7 w-7 pr-0.5"/>
             </button>
         {/if}
