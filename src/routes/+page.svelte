@@ -173,7 +173,7 @@
                         <!-- svelte-ignore a11y_missing_attribute -->
                         <!-- svelte-ignore a11y_consider_explicit_label -->
                         <a
-                            class="relative h-[150px] w-[150px] overflow-hidden rounded-l-md bg-content/50 group"
+                            class="relative h-[150px] w-[90px] sm:w-[150px] overflow-hidden rounded-l-md bg-content/50 group"
                         >
                             <img 
                                 src="https://media.istockphoto.com/id/480155792/photo/fogged-in.jpg?s=612x612&w=0&k=20&c=f7eqdlimc3B9pxkO6Gd6yZEgVNNTFNw0LhUj3s04_Sg="
@@ -184,12 +184,12 @@
                             <div class="font-medium text-base text-content flex items-center justify-between">
                                 Lake Cushman Drive
                             </div>
-                            <div class="text-tertiary text-[11px] -mt-[2px]">Western Washington • 50 minutes • 43 miles</div>
+                            <div class="text-tertiary text-[10px] sm:text-[11px] -mt-[2px]">Western Washington • 50 minutes • 43 miles</div>
                             <div class="flex items-center mt-auto w-full space-x-2">
                                 <div class="relative group grow">
                                 
                                     <!-- svelte-ignore a11y_missing_attribute -->
-                                    <a class="text-[13px] focus:ring-0 h-8 flex items-center justify-center cursor-pointer text-content  py-[2px] rounded-md not-dark:bg-white/70 dark:bg-tertiary/20 border border-secondary/10">
+                                    <a class="text-[11px] sm:text-[13px] focus:ring-0 h-8 flex items-center justify-center cursor-pointer text-content  py-[2px] rounded-md not-dark:bg-white/70 dark:bg-tertiary/20 border border-secondary/10">
                                         Open in Google Maps    
                                         <svg class="fill-content/80 ml-2 h-4.5 w-4.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M9.5 5.5a4 4 0 0 0-4 4v4.7l28.3 28.3h4.7a4 4 0 0 0 4-4v-29a4 4 0 0 0-4-4zm20.66 3.895a8.446 8.446 0 0 1 8.445 8.447v0c0 4.914-3.995 8.748-8.445 13.774c-4.262-4.812-8.104-8.533-8.423-13.154a8 8 0 0 1-.025-.62a8.446 8.446 0 0 1 8.445-8.448zm0 4.387a4.06 4.06 0 0 0-4.06 4.06v0a4.06 4.06 0 0 0 4.06 4.06h0a4.06 4.06 0 0 0 0-8.12M5.5 27.182V38.5a4 4 0 0 0 4 4h11.32z" stroke-width="1"/></svg>
                                     </a>
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                         <!-- svelte-ignore a11y_consider_explicit_label -->
-                        <a class="absolute top-2 right-2">
+                        <a class="absolute top-2 right-2 hidden sm:flex">
                             <svg class="text-content fill-background cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z"/></svg>
                         </a>
                     </div>
