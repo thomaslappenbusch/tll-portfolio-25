@@ -205,7 +205,7 @@
             <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                 CoderPrep.com
             </a>
-            <div class="text-xs italic ml-auto hidden sm:flex">JavaScript Consulting</div>
+            <div class="text-xs italic ml-auto hidden sm:flex">Frontend Development (Svelte, Tailwind)</div>
             <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-sm bg-muted/40 rounded-full sm:hidden">
                 Open
             </a>
