@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
     import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, ExternalLinkIcon } from "lucide-svelte";
     import Moon from "lucide-svelte/icons/moon";
     import Sun from "lucide-svelte/icons/sun";
@@ -201,6 +202,30 @@
 <!-- <div class="flex flex-col w-full">
     <div class="flex justify-between items-center mt-12">
         <div class="text-2xl">
+            Image Gallery
+        </div>
+    </div>
+    <div class="w-full h-[700px] mt-12 sm:grid grid-cols-2 grid-rows-12 gap-2 hidden">
+        <div class="col-span-1 row-span-5 bg-zinc-50 rounded-sm relative overflow-hidden object-cover">
+            <img src="gallery2.jpg" class="inset-0 absolute scale-140"/>
+        </div>
+        <div class="col-span-1 row-span-8 bg-zinc-50 rounded-sm relative overflow-hidden">
+            <img src="https://cdn.discordapp.com/attachments/380941291338596353/1375333972284014612/image.jpg?ex=68314f13&is=682ffd93&hm=45f4f06e979338944894bff73ae52e3a4096a850244f130b61530bff690ed00c&" class="inset-0 absolute object-cover"/>
+        </div>
+        <div class="col-span-1 row-span-8 bg-zinc-50 rounded-sm relative overflow-hidden object-cover">
+            <img src="https://pbs.twimg.com/media/GrjEShfboAARzIG?format=jpg&name=small" class="inset-0 absolute object-cover"/>
+        </div>
+        <div class="col-span-1 row-span-5 border border-zinc-200 rounded-sm relative overflow-hidden">
+            <img src="coastalui.png" class="inset-0 absolute my-auto"/>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="mt-16 h-[2px] w-full bg-tertiary/20 rounded-full"></div> -->
+
+<!-- <div class="flex flex-col w-full">
+    <div class="flex justify-between items-center mt-12">
+        <div class="text-2xl">
             Development Gallery
         </div>
     </div>
@@ -283,8 +308,29 @@
 <div class="flex flex-col w-full mb-[55vh]">
     <div class="flex justify-between items-center mt-12">
         <div class="text-2xl">
-            Let's connect
+            Let's Talk
         </div>
     </div>
-    <p class="mb-12 mt-3 text-tertiary">Always interested in joining startups, part-time or full-time development positions.</p>
+    <p class="mb-12 mt-3 text-tertiary">Interested in joining emerging startups, part-time or full-time development positions.</p>
+    <button 
+        onclick={() => window.open('https://discordapp.com/users/217831307219042304', '_blank')}
+        class="mr-auto underline underline-offset-3 text-lg cursor-pointer flex items-center text-indigo-400 font-medium"
+    >
+        Add me on Discord
+        <ChevronRight class="h-4.5 ml-1 mt-1 w-4.5"/>
+    </button>
+    <button 
+        onclick={() => window.open('https://www.linkedin.com/in/thomaslappenbusch/', '_blank')}
+        class="mr-auto underline underline-offset-3 text-lg mt-5 cursor-pointer flex items-center text-blue-400 font-medium"
+    >
+        Connect on LinkedIn
+        <ChevronRight class="h-4.5 ml-1 mt-1 w-4.5"/>
+    </button>
+    <button 
+        onclick={() => window.open('https://x.com/thomaslappenbus', '_blank')}
+        class="mr-auto underline underline-offset-3 text-lg mt-5 cursor-pointer flex items-center not-dark:text-black text-zinc-300 font-medium"
+    >
+        Message me on X
+        <ChevronRight class="h-4.5 ml-1 mt-1 w-4.5"/>
+    </button>
 </div>
