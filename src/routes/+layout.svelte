@@ -9,7 +9,7 @@
 
 <ModeWatcher />
 <div class="min-h-screen bg-background flex justify-center relative overflow-hidden">
-	<div class="mx-auto max-w-[750px] flex flex-col w-full h-full relative pt-16 px-3 xl:px-0">
+	<div class="mx-auto max-w-[675px] flex flex-col w-full h-full relative pt-16 px-3 xl:px-0">
 		<div class="-top-6 hidden sm:flex -left-[500px] not-dark:hidden w-[900px] h-24 bg-zinc-500/10 rounded-full rotate-10 blur-[40px] absolute">
 		</div>
 		{@render children()}
