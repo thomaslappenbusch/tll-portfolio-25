@@ -194,9 +194,25 @@
                 Open
             </a>
         </div>
+
+        <div class="flex items-center justify-between">
+                <img src="coderprepfav.png" class="sm:h-7 dark:border border-zinc-700 sm:w-7 h-9 w-9 mr-2 bg-slate-200 dark:bg-slate-700 rounded-md invert dark:invert-0"/>            <div class="flex flex-col sm:hidden mr-auto">
+                <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
+                    CoderPrep.com
+                </a>
+                <div class="text-xs italic mr-auto">Frontend Development (Svelte, Tailwind)</div>
+            </div>
+            <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
+                CoderPrep.com
+            </a>
+            <div class="text-xs italic ml-auto hidden sm:flex">JavaScript Consulting</div>
+            <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-sm bg-muted/40 rounded-full sm:hidden">
+                Open
+            </a>
+        </div>
         
         <div class="flex items-center justify-between">
-            <svg class="sm:h-7 sm:w-7 h-9 w-9 mr-2 bg-green-100 border border-green-200 dark:border-zinc-700 text-green-400 dark:text-green-600 dark:bg-zinc-800 p-[2px] rounded-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M266 51.727c-39.32 0-71 31.68-71 71s31.68 71.002 71 71.002s71-31.683 71-71.002c0-39.32-31.68-71-71-71m-144 32c-30.483 0-55 24.517-55 55c0 30.482 24.517 55.002 55 55.002s55-24.52 55-55.002s-24.517-55-55-55m-23 128v110.002h238V211.727zm350 4.648l-94 40.285v20.133l94 40.285zm-386 2.352v32h18v-32zm113 121.002v17.998h13.012l-51.123 136.275h19.222l51.507-136.275l.382 136.275h18l.382-136.275l51.507 136.275h19.222l-51.123-136.275H260v-17.998c-28.003-.003-55.997 0-84 0"/></svg>
+            <svg class="sm:h-7 sm:w-7 h-9 w-9 mr-2  bg-green-100 dark:border-zinc-700 text-green-400 dark:text-green-600 dark:bg-zinc-800 p-[2px] rounded-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M266 51.727c-39.32 0-71 31.68-71 71s31.68 71.002 71 71.002s71-31.683 71-71.002c0-39.32-31.68-71-71-71m-144 32c-30.483 0-55 24.517-55 55c0 30.482 24.517 55.002 55 55.002s55-24.52 55-55.002s-24.517-55-55-55m-23 128v110.002h238V211.727zm350 4.648l-94 40.285v20.133l94 40.285zm-386 2.352v32h18v-32zm113 121.002v17.998h13.012l-51.123 136.275h19.222l51.507-136.275l.382 136.275h18l.382-136.275l51.507 136.275h19.222l-51.123-136.275H260v-17.998c-28.003-.003-55.997 0-84 0"/></svg>
             <div class="flex flex-col sm:hidden mr-auto">
                 <a href="https://owlist.com" target="_blank" rel="noopener noreferrer" class="text-lg group flex items-center shrink-0 pr-8 cursor-pointer hover:text-blue-600">
                     <span class="group-hover:underline underline-offset-2">Owlist.com</span>
