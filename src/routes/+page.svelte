@@ -181,16 +181,16 @@
         <div class="flex items-center justify-between">
             <img src="socialplugfav.png" class="sm:h-7 sm:w-7 h-9 w-9 mr-2 bg-green-200 dark:bg-green-700 p-[4px] rounded-md"/>
             <div class="flex flex-col sm:hidden mr-auto">
-                <a href="https://socialplug.com" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
+                <a href="https://socialplug.io" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                     SocialPlug.io
                 </a>
                 <div class="text-xs italic mr-auto">JavaScript Consulting</div>
             </div>
-            <a href="https://socialplug.com" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
+            <a href="https://socialplug.io" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                 SocialPlug.io
             </a>
             <div class="text-xs italic ml-auto hidden sm:flex">JavaScript Consulting</div>
-            <a href="https://socialplug.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-sm bg-muted/40 rounded-full sm:hidden">
+            <a href="https://socialplug.io" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-sm bg-muted/40 rounded-full sm:hidden">
                 Open
             </a>
         </div>
