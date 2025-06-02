@@ -414,5 +414,5 @@
 
 
 <div class="flex items-center justify-center space-x-6 mt-12 w-full mb-[35vh]">
-    Open blogs <ArrowRight class="h-4 w-4 ml-1"/>
+    Open blogs <span class="text-sm text-tertiary ml-2">Not availalbe yet</span>
 </div>
