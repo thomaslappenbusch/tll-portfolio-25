@@ -15,6 +15,32 @@
     <div class="flex flex-col">
         <p class="text-tertiary text-sm">Hello, my name is</p>
         <p class="text-content text-3xl sm:text-4xl xl:text-5xl font-medium">Thomas Lappenbusch</p>
+        <div class="flex items-center justify-start space-x-2 sm:space-x-4 mt-3">
+            <button 
+                onclick={() => window.open('https://discordapp.com/users/217831307219042304', '_blank')}
+                class="text-sm cursor-pointer flex items-center text-indigo-400"
+            >
+                Discord
+            </button>
+            <button 
+                onclick={() => window.open('https://www.linkedin.com/in/thomaslappenbusch/', '_blank')}
+                class="text-sm  cursor-pointer flex items-center text-blue-400"
+            >
+                LinkedIn
+            </button>
+            <button 
+                onclick={() => window.open('https://x.com/thomaslappenbus', '_blank')}
+                class="text-sm  cursor-pointer flex items-center not-dark:text-black text-zinc-300"
+            >
+                Twitter / X
+            </button>
+            <button 
+                onclick={() => window.open('https://x.com/thomaslappenbus', '_blank')}
+                class="text-sm  cursor-pointer flex items-center text-[#14A800]"
+            >
+                Upwork
+            </button>
+        </div>
     </div>
     <div class="sm:flex items-center space-x-4 z-10">
         <!-- svelte-ignore a11y_consider_explicit_label -->
@@ -387,29 +413,6 @@
 <!-- <div class="mt-16 h-[2px] w-full bg-tertiary/20 rounded-full"></div> -->
 
 
-<div class="flex items-center justify-center space-x-6 mt-12 w-full mb-[55vh]">
-    <button 
-        onclick={() => window.open('https://discordapp.com/users/217831307219042304', '_blank')}
-        class=" underline underline-offset-3 text-md cursor-pointer flex items-center text-indigo-400"
-    >
-        Discord
-    </button>
-    <button 
-        onclick={() => window.open('https://www.linkedin.com/in/thomaslappenbusch/', '_blank')}
-        class=" underline underline-offset-3 text-md  cursor-pointer flex items-center text-blue-400"
-    >
-        LinkedIn
-    </button>
-    <button 
-        onclick={() => window.open('https://x.com/thomaslappenbus', '_blank')}
-        class=" underline underline-offset-3 text-md  cursor-pointer flex items-center not-dark:text-black text-zinc-300"
-    >
-        Twitter / X
-    </button>
-    <button 
-        onclick={() => window.open('https://x.com/thomaslappenbus', '_blank')}
-        class=" underline underline-offset-3 text-md  cursor-pointer flex items-center text-[#14A800]"
-    >
-        Upwork
-    </button>
+<div class="flex items-center justify-center space-x-6 mt-12 w-full mb-[35vh]">
+    Open blogs <ArrowRight class="h-4 w-4 ml-1"/>
 </div>
