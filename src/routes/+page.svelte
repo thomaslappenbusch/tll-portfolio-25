@@ -1,6 +1,6 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
-    import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, CircleHelp, ExternalLinkIcon, Film, House } from "lucide-svelte";
+    import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, CircleHelp, ExternalLink, ExternalLinkIcon, Film, House } from "lucide-svelte";
     import Moon from "lucide-svelte/icons/moon";
     import Sun from "lucide-svelte/icons/sun";
 
@@ -8,14 +8,20 @@
     import { fade } from "svelte/transition";
 
     let currentSlide = $state(0)
+    let p1Open = $state(false)
+    let p2Open = $state(false)
     
 </script>
+
+<ModeWatcher defaultMode={"dark"}/>
 
 <div class="flex items-center justify-between">
     <div class="flex flex-col">
         <p class="text-tertiary text-sm">Hello, my name is</p>
-        <p class="text-content text-3xl sm:text-4xl xl:text-5xl font-medium">Thomas Lappenbusch</p>
-        <div class="flex items-center justify-start space-x-2 sm:space-x-4 mt-3">
+        <p class="qtext-content text-3xl sm:text-4xl xl:text-5xl font-medium">Thomas Lappenbusch</p>
+        <div class="flex items-center justify-start space-x-3 sm:space-x-4 mt-3 flex-wrap">
+            
+       
             <button 
                 onclick={() => window.open('https://discordapp.com/users/217831307219042304', '_blank')}
                 class="text-sm cursor-pointer flex items-center text-indigo-400"
@@ -40,9 +46,18 @@
             >
                 Upwork
             </button>
+            <div class="h-4 w-[1px] bg-tertiary/20  sm:hidden">
+            </div>
+            <button onclick={toggleMode} class="hover:bg-tertiary/20 transition cursor-pointer sm:hidden rounded-md h-8 w-8 p-1">
+                {#if mode.current === "dark"}
+                    <Moon class="h-full w-full"/>
+                {:else}
+                    <Sun class="h-full w-full p-[1px]"/>
+                {/if}
+            </button>
         </div>
     </div>
-    <div class="sm:flex items-center space-x-4 z-10">
+    <div class="hidden sm:flex items-center space-x-4 z-10">
         <!-- svelte-ignore a11y_consider_explicit_label -->
         <!-- <button class="h-6 w-6 text-content hover:text-accent transition cursor-pointer rounded-md">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38c0-.27.01-1.13.01-2.2c0-.75-.25-1.23-.54-1.48c1.78-.2 3.65-.88 3.65-3.95c0-.88-.31-1.59-.82-2.15c.08-.2.36-1.02-.08-2.12c0 0-.67-.22-2.2.82c-.64-.18-1.32-.27-2-.27s-1.36.09-2 .27c-1.53-1.03-2.2-.82-2.2-.82c-.44 1.1-.16 1.92-.08 2.12c-.51.56-.82 1.28-.82 2.15c0 3.06 1.86 3.75 3.64 3.95c-.23.2-.44.55-.51 1.07c-.46.21-1.61.55-2.33-.66c-.15-.24-.6-.83-1.23-.82c-.67.01-.27.38.01.53c.34.19.73.9.82 1.13c.16.45.68 1.31 2.69.94c0 .67.01 1.3.01 1.49c0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8"/></svg>
@@ -58,7 +73,6 @@
                 <Sun class="h-full w-full p-[1px]"/>
             {/if}
         </button>
-        
     </div>
 </div>
 
@@ -75,84 +89,78 @@
 <div class="my-8 h-[2px] w-full bg-tertiary/20 rounded-full"></div>
 
 <div class="flex flex-col w-full">
-    <div class="flex justify-between items-center mb-8">
-        <div class="text-sm font-medium text-tertiary">
-            My Projects
-        </div>
-    </div>
-    <div class="flex items-start">
-        <!-- <div class="h-22 aspect-square bg-[#181828] flex items-center justify-center rounded-md">
-            <svg class="h-9 w-9 shrink-0 text-white" viewBox="0 0 24 24"><path fill="currentColor" d="m1 18l6-8l4.5 6H19l-5-6.65l-2.5 3.3L10.25 11L14 6l9 12zm4-2h4l-2-2.675zm0 0h4z"></path></svg>
-        </div> -->
-        <div class="flex items-center justify-between grow">
+    <!-- Coastal UI Project -->
+    <div class="flex flex-col items-start">
+        <div onclick={() => p1Open = !p1Open} class="flex items-center cursor-pointer transition rounded-md justify-between grow w-full">
             <div class="flex flex-col">
-                <div class="text-xl tracking-tight font-medium">Coastal UI</div>
+                <div class="text-xl tracking-tight font-medium flex items-center">
+                    Coastal UI
+                    <a href="https://www.coastalui.com" target="_blank" class="hidden sm:flex ml-1 items-center cursor-pointer group hover:bg-tertiary/10 p-1 rounded-md relative w-6.5">
+                        <div class="absolute bottom-8 rounded-md border border-tertiary/30 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-1 text-center text-xs opacity-0 bg-background group-hover:opacity-100 pointer-events-none transition">
+                            Open Website
+                        </div>
+                        <ExternalLinkIcon strokeWidth={1.5} class="h-5 w-5"/>
+                    </a>
+                </div>
                 <p class="text-content/80 sm:text-md text-sm mt-1">A library of modern, dark UI elements for Tailwind CSS + Svelte. Over 4,000 unique visitors from Reddit and madewithsvelte.</p>
             </div>
-            <div class="h-22 sm:flex items-center hidden">
-                <a href="https://www.coastalui.com" target="_blank" class="flex items-center ml-24 mt-2 cursor-pointer group hover:bg-tertiary/10 p-1 rounded-md relative">
-                    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-30 text-center text-xs opacity-0 group-hover:opacity-100 pointer-events-none transition">
-                        Open Website
-                    </div>
-                    <ExternalLinkIcon strokeWidth={1.5} class="h-5 w-5"/>
-                </a>
-            </div> 
+            <div class={`ml-4 ${p1Open ? "rotate-180" : ""}`}>
+                <ChevronDown strokeWidth={1.5} />
+            </div>
         </div>
+        {#if p1Open}
+            <!-- Desktop Grid -->
+            <div class="hidden sm:grid grid-cols-7 grid-rows-2 w-full mt-5 gap-1 h-[340px]">
+                <img src="coastal1.png" class="row-span-2 col-span-5 rounded-md border border-secondary-muted/20 h-full object-cover"/>
+                <img src="coastal2.png" class="row-span-1 col-span-2 rounded-md object-cover border border-secondary-muted/20 h-full"/>
+                <img src="coastal2.png" class="row-span-1 col-span-2 rounded-md object-cover border border-secondary-muted/20 h-full"/>
+            </div>
+            <!-- Mobile Single Image -->
+            <div class="sm:hidden mt-5">
+                <img src="coastal1.png" class="w-full rounded-md border border-secondary-muted/20 object-cover"/>
+                <a href="https://www.coastalui.com" target="_blank" class="w-full bg-content rounded-md mt-3 flex items-center justify-center text-background py-3">
+                    Open Live Website
+                    <ExternalLink class="h-4 w-4 ml-2"/>
+                </a>
+            </div>
+        {/if}
     </div>
-    <div class="flex items-start mt-12">
-        <!-- <div class="h-22 aspect-square bg-[#ff7701] flex items-center justify-center rounded-md">
-            <svg class="h-8 w-8 shrink-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 336.000000 306.000000"
-                preserveAspectRatio="xMidYMid meet">
-                <metadata>
-                Created by potrace 1.10, written by Peter Selinger 2001-2011
-                </metadata>
-                <g transform="translate(0.000000,306.000000) scale(0.100000,-0.100000)"
-                fill="#ffffff" stroke="none">
-                <path d="M1310 2983 c0 -5 241 -250 536 -546 397 -398 538 -546 544 -570 13
-                -48 -1 -101 -27 -105 -12 -2 -27 -10 -33 -18 -11 -12 -170 -14 -1131 -14
-                l-1119 0 0 -240 0 -240 1124 0 c783 0 1127 -3 1131 -11 4 -5 18 -14 31 -19 21
-                -8 24 -16 24 -61 l0 -52 -184 -191 c-101 -105 -344 -353 -540 -551 -196 -198
-                -356 -361 -356 -362 0 -2 140 -3 311 -3 l311 0 700 700 c385 385 706 700 714
-                700 11 0 14 18 14 85 0 48 -4 85 -10 85 -5 0 -328 320 -717 710 l-707 710
-                -308 0 c-169 0 -308 -3 -308 -7z"/>
-                </g>
-            </svg>
-        </div> -->
-        <div class="flex items-center justify-between grow">
+
+    <!-- Clutch Maps Project -->
+    <div class="flex flex-col items-start mt-12">
+        <div onclick={() => p2Open = !p2Open} class="flex items-center cursor-pointer transition rounded-md justify-between grow w-full">
             <div class="flex flex-col">
-                <div class="text-xl tracking-tight font-medium">Clutch Maps</div>
+                <div class="text-xl tracking-tight font-medium flex items-center">
+                    Clutch Maps
+                    <a href="https://www.clutchmaps.com" target="_blank" class="hidden sm:flex ml-1 items-center cursor-pointer group hover:bg-tertiary/10 p-1 rounded-md relative w-6.5">
+                        <div class="absolute bottom-8 rounded-md border border-tertiary/30 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-1 text-center text-xs opacity-0 bg-background group-hover:opacity-100 pointer-events-none transition">
+                            Open Website
+                        </div>
+                        <ExternalLinkIcon strokeWidth={1.5} class="h-5 w-5"/>
+                    </a>
+                </div>
                 <p class="text-content/80 mt-1 sm:text-md text-sm">A web app for finding great driving routes near you. Currently built with Svelte + Mapbox, but currently in open beta.</p>
             </div>
-            <div class="h-22 sm:flex items-center hidden">
-                <a href="https://www.clutchmaps.com" target="_blank" class="flex items-center ml-24 mt-2 cursor-pointer group hover:bg-tertiary/10 p-1 rounded-md relative">
-                    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-30 text-center text-xs opacity-0 group-hover:opacity-100 pointer-events-none transition">
-                        Open Website
-                    </div>
-                    <ExternalLinkIcon strokeWidth={1.5} class="h-5 w-5"/>
-                </a>
-            </div> 
-        </div>
-    </div>
-    <div class="flex items-start mt-12">
-        <!-- <div class="h-22 aspect-square bg-[#00bcff] flex items-center justify-center rounded-md">
-            <svg class="h-8 w-8 shrink-0 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="m4 8l4-4m6 0L4 14m0 6L20 4m0 6L10 20m10-4l-4 4"/></svg>
-        </div> -->
-        <div class="flex items-center justify-between grow">
-            <div class="flex flex-col">
-                <div class="text-xl tracking-tight font-medium">Tailwind BG</div>
-                <p class="text-content/80 sm:text-md text-sm mt-1">A colletction of copy-paste tailwind backgrounds. Has the uniqiue ability to test out backgrounds, and even add test content.</p>
+            <div class={`ml-4 ${p2Open ? "rotate-180" : ""}`}>
+                <ChevronDown strokeWidth={1.5} />
             </div>
-            <div class="h-22 sm:flex items-center hidden">
-                <a href="https://www.tailwindbg.com" target="_blank" class="flex items-center ml-24 mt-2 cursor-pointer group hover:bg-tertiary/10 p-1 rounded-md relative">
-                    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-30 text-center text-xs opacity-0 group-hover:opacity-100 pointer-events-none transition">
-                        Open Website
-                    </div>
-                    <ExternalLinkIcon strokeWidth={1.5} class="h-5 w-5"/>
-                </a>
-            </div> 
-            
         </div>
+        {#if p2Open}
+            <!-- Desktop Grid -->
+            <div class="hidden sm:grid grid-cols-7 grid-rows-2 w-full mt-5 gap-1 h-[370px]">
+                <img src="clutch1.png" class="row-span-2 col-span-5 rounded-md border border-secondary-muted/30 h-full object-cover"/>
+                <img src="clutch2.png" class="row-span-1 col-span-2 rounded-md object-cover border border-secondary-muted/30 h-full"/>
+                <img src="clutch3.png" class="row-span-1 col-span-2 rounded-md object-cover border border-secondary-muted/30 h-full"/>
+            </div>
+            <!-- Mobile Single Image -->
+            <div class="sm:hidden mt-5">
+                <img src="clutch1.png" class="w-full rounded-md border border-secondary-muted/30 object-cover"/>
+                <a href="https://www.clutchmaps.com" target="_blank" class="w-full bg-content rounded-md mt-3 flex items-center justify-center text-background py-3">
+                    Open Live Website
+                    <ExternalLink class="h-4 w-4 ml-2"/>
+                </a>
+            </div>
+        {/if}
     </div>
 </div>
 
@@ -162,7 +170,7 @@
 <div class="flex flex-col w-full">
     <div class="flex justify-between items-center my-12">
         <div class="text-sm font-medium text-tertiary">
-            Work Portfolio
+            Freelance
         </div>
         <div class="text-sm text-[#14A800] hover:text-blue-600 cursor-pointer underline flex items-center">
             Hire me on Upwork
@@ -176,7 +184,7 @@
                 <a href="https://virlo.ai" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                     Virlo.ai
                 </a>
-                <div class="text-xs italic tracking-tight mr-auto">MVP Development (Svelte, Supabase)</div>
+                <div class="text-xs italic tracking-tight mr-auto text-secondary">MVP Development (Svelte, Supabase)</div>
             </div>
             <a href="https://virlo.ai" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                 Virlo.ai
@@ -193,7 +201,7 @@
                 <a href="https://creatorcontact.io" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                     CreatorContact.io
                 </a>
-                <div class="text-xs italic mr-auto">Onboarding Flow (Svelte)</div>
+                <div class="text-xs italic mr-auto text-secondary">Onboarding Flow (Svelte)</div>
             </div>
             <a href="https://creatorcontact.io" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                 CreatorContact.io
@@ -210,7 +218,7 @@
                 <a href="https://socialplug.io" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                     SocialPlug.io
                 </a>
-                <div class="text-xs italic mr-auto">JavaScript Consulting</div>
+                <div class="text-xs italic mr-auto text-secondary">JavaScript Consulting</div>
             </div>
             <a href="https://socialplug.io" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                 SocialPlug.io
@@ -226,7 +234,7 @@
                 <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="text-lg flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                     CoderPrep.com
                 </a>
-                <div class="text-xs italic mr-auto">Frontend Development (Svelte, Tailwind)</div>
+                <div class="text-xs italic mr-auto text-secondary">Frontend Development (Svelte, Tailwind)</div>
             </div>
             <a href="https://coderprep.com" target="_blank" rel="noopener noreferrer" class="text-lg hidden sm:flex items-center shrink-0 pr-8 hover:underline underline-offset-2 cursor-pointer hover:text-blue-600">
                 CoderPrep.com
@@ -244,7 +252,7 @@
                     <span class="group-hover:underline underline-offset-2">Owlist.com</span>
                     <span class="ml-1 italic text-tertiary text-xs mt-1">In Progress</span>
                 </a>
-                <div class="text-xs italic ml-auto">MVP Development (Svelte, Supabase)</div>
+                <div class="text-xs italic ml-auto text-secondary">MVP Development (Svelte, Supabase)</div>
             </div>
             <a href="https://owlist.com" target="_blank" rel="noopener noreferrer" class="text-lg group hidden sm:flex items-center shrink-0 pr-8 cursor-pointer hover:text-blue-600">
                 <span class="group-hover:underline underline-offset-2">Owlist.com</span>
