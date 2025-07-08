@@ -90,6 +90,14 @@
 
 <div class="flex flex-col w-full">
     <!-- Coastal UI Project -->
+     <!-- Preload images -->
+    <div class="hidden">
+        <img src="coastal1.png" alt="preload" />
+        <img src="coastal2.png" alt="preload" />
+        <img src="clutch1.png" alt="preload" />
+        <img src="clutch2.png" alt="preload" />
+        <img src="clutch3.png" alt="preload" />
+    </div>
     <div class="flex flex-col items-start">
         <div onclick={() => p1Open = !p1Open} class="flex items-center cursor-pointer transition rounded-md justify-between grow w-full">
             <div class="flex flex-col">
